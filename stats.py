@@ -3,14 +3,13 @@ def get_book_text(path_to_file):
                 file_contents = f.read()
         return file_contents
 #get book text
-def get_num_words():
-        book=get_book_text("books/frankenstein.txt")
+def get_num_words(book):
         words = book.split()
         num_words=len(words)
-        print(f"{num_words} words found in the document")
+        return num_words
 #get count of words
-def letter_count(book_text):
-	lower_words=book_text.lower()
+def letter_count(book):
+	lower_words=book.lower()
 	letter_dic={}
 	for letters in lower_words:
 		if letters in letter_dic:
